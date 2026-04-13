@@ -1,0 +1,9 @@
+<!-- <p>{{_postService.postSignal() | json}}</p> -->
+
+<div class="row">
+    @for (post of _postService.postSignal(); track post.id) {
+    <div class="col-md-4 mb-4">
+        <app-post-card [postobj]="post"></app-post-card>
+    </div>
+}
+</div>
