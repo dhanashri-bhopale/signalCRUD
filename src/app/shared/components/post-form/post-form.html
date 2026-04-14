@@ -1,1 +1,37 @@
-<p>post-form works!</p>
+<div class="row">
+  <div class="col-md-6 offset-md-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="text-secondary">Add Post</h5>
+        <form [formGroup]="postForm">
+          <mat-form-field>
+            <mat-label>Title</mat-label>
+            <input formControlName="title" type="text" matInput />
+            @if (f['title'].hasError('required')) {
+              <mat-error>Title is <strong>required</strong></mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Content</mat-label>
+            <input formControlName="content" type="text" matInput />
+            @if (f['content'].hasError('required')) {
+              <mat-error>Content is <strong>required</strong></mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>PostId</mat-label>
+            <mat-select formControlName="postId">
+              @for (val of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; track $index) {
+                <mat-option [value]="val">{{ val }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+
+          <button class="w-100" matButton="filled">Add post</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

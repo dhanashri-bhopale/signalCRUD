@@ -5,6 +5,9 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatListModule} from '@angular/material/list';
+import {MatInputModule} from '@angular/material/input';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 
 export const MATERIAL_IMPORTS = [
     MatButtonModule,
@@ -13,5 +16,8 @@ export const MATERIAL_IMPORTS = [
     MatSidenavModule,
     MatToolbarModule,
     MatSnackBarModule,
-    MatListModule
+    MatListModule,
+    MatInputModule,
+    MatFormFieldModule,
+    MatSelectModule
 ]
