@@ -6,6 +6,6 @@
             <p class="text-muted">{{postobj.content}}</p>
         </mat-card-content>
         <mat-card-actions>
-            <button [routerLink]="['posts', postobj.id]" matButton="elevated">View More...</button>
+            <button [routerLink]="postobj.id" matButton="elevated">View More...</button>
         </mat-card-actions>
     </mat-card>

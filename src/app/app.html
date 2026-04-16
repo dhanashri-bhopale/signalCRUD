@@ -2,8 +2,8 @@
   <mat-sidenav #sidenav>
     <mat-list (click)="sidenav.close()">
       <mat-list-item routerLink="posts">Post</mat-list-item>
-      <mat-list-item routerLink="posts/add">Add Post</mat-list-item> 
-      <mat-list-item>Logout</mat-list-item>
+      <mat-list-item routerLink="posts/add">Add Post</mat-list-item>
+      <mat-list-item>LogOut</mat-list-item>
     </mat-list>
   </mat-sidenav>
 
@@ -21,3 +21,9 @@
     </div>
   </div>
 </mat-sidenav-container>
+
+@if (isLoading) {
+  <div class="spinner">
+    <mat-spinner></mat-spinner>
+  </div>
+}

@@ -1,1 +1,18 @@
-<p>post-details works!</p>
+@if (SelectedPost) {
+    <mat-card>
+        <button matIconButton>
+            <mat-icon routerLink="/posts">arrow_back</mat-icon>
+        </button>
+        <mat-card-header>
+            <h2>{{SelectedPost.title}}</h2>
+        </mat-card-header>
+        <mat-card-content class="mb-3">
+            <p class="text-muted">{{SelectedPost.content}}</p>
+            <mat-divider></mat-divider>
+        </mat-card-content>
+        <mat-card-actions class="d-flex justify-content-end">
+            <button matButton="elevated">Edit</button>
+            <button class="ml-3" matButton="elevated">Delete</button>
+        </mat-card-actions>
+    </mat-card>
+}
